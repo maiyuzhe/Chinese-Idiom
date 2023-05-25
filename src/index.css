@@ -1,0 +1,202 @@
+@font-face {
+  font-family: 'Bank-Gothic';
+  src: url('Fonts/BankGothic\ Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Bank-Gothic-Bold';
+  src: url('Fonts/BankGothic\ Bold.ttf');
+}
+
+body {
+  margin:0em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Bank-Gothic';
+  font-size: 1.5em;
+  background-image: url(../public/parchment.jpeg);
+  background-attachment: fixed;
+  background-size: 95em;
+  background-position: 0em -4em;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.TranslateCard {
+  font-family:Arial, Helvetica, sans-serif;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  margin: 1em 1em 1em 1em;
+  border: 0.1em solid black;
+  padding: 0.5em;
+  height:auto;
+  width: 20em;
+  color:white;
+  background-color: rgba(1,1,1, 0.5);
+  transition-property: background-color, color, transform;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+.TranslateCard:hover{
+  background-color: rgb(255,255,255,0.5);
+  color:black;
+  transform:scale(1.02)
+}
+
+form {
+  display:flex;
+  justify-content: center;
+}
+
+input {
+  width: 80%;
+  text-align: justify;
+  font-size: 1.2em;
+  font-family:'Bank-Gothic';
+  background-color: rgb(255,255,255, 0.3);
+  text-align: center;
+  border: 0em
+}
+
+h1 {
+  margin-top: 2em;
+  display: flex;
+  justify-content: center;
+  font-size: 2em;
+  font-family: 'Bank-Gothic-Bold';
+  color: orange;
+  -webkit-text-stroke-color: black;
+  -webkit-text-stroke-width: 0.01em;
+}
+
+.idiomSearch{
+  width: 50%;
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.Show {
+  display: none;
+}
+
+.Hide {
+  background-color: bisque;
+  height: 2em;
+  border:solid;
+  border-width: 0.2em;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+.Hide:hover{
+  background-color: orange;
+}
+
+.idiomList{
+  margin-top: 3em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.navBar{
+  margin: 0em;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-evenly;
+  position: fixed;
+  top:0;
+  width: 100%;
+  background-color: rgb(1,1,1,0.5);
+  height:3em
+}
+
+.navBarLink {
+  text-decoration: none;
+  color:black;
+  border: solid 0.15em;
+  padding: 0.3em;
+  background-color:bisque;
+  transition-property: background-color, color;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+.navBarLink:hover{
+  background-color:orange;
+  color:black;
+}
+
+.defaultDiv{
+  margin-top: 3em;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding: 2em;
+  color:white;
+  background-color: rgb(1,1,1,0.5);
+}
+
+.navSelected{
+  text-decoration: none;
+  color:black;
+  border: solid 0.15em;
+  padding: 0.3em;
+  background-color:orange
+}
+
+.page {
+  position: absolute;
+  left: 15px;
+  right: 15px;
+}
+
+.page-enter {
+  opacity: 0;
+}
+
+.page-enter-active {
+  opacity: 1;
+  transition: opacity 700ms
+}
+
+.page-exit {
+  opacity: 1;
+}
+
+.page-exit-active {
+  opacity: 0;
+  transition: opacity 1000ms;
+}
+
+.navButton{
+  top: 2em;
+  left: 5em;
+  background-color: bisque;
+  height: 2em;
+  border:solid;
+  border-width: 0.2em;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  transition-timing-function: linear;
+}
+
+.navButton:hover{
+  background-color: orange;
+}
