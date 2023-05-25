@@ -1,5 +1,9 @@
 # Getting Started with Chinese Idiom Query and Collect
 
+### Database
+
+If you wish to use the Idiom collection feature, you may start the server that saves your selected idioms by running `npm run server`
+
 ### `npm install` and `npm start`
 
 `npm install` will install all needed dependencies
