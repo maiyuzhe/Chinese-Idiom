@@ -1,5 +1,8 @@
 # Getting Started with Chinese Idiom Query and Collect
 
+![ezgif-4-5c8d0410a2](https://github.com/maiyuzhe/Chinese-Idiom/assets/100047986/b1dceb40-4df8-455f-8ef1-5a70093c9a73)
+
+
 ### Database
 
 If you wish to use the Idiom collection feature, you may start the server that saves your selected idioms by running `npm run server`
