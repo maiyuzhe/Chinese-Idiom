@@ -8,21 +8,27 @@ import NavBar from './NavBar';
 
 function App() {
 
-  const [myIdioms, setIdioms] = useState([])
-  const [newArray, setArray] = useState([])
+  const [myIdioms, setIdioms] = useState([]);
+  const [newArray, setArray] = useState([]);
+  const [warning, setWarning] = useState(false);
 
   useEffect(()=>{
       fetch('http://localhost:3001/myIdioms')
       .then(res=>res.json())
       .then(data=> {
-          setIdioms([...data])
-          setArray([...data.map(datum=> datum.chinese)])
+          setIdioms([...data]);
+          setArray([...data.map(datum=> datum.chinese)]);
       })
-  },[])
+      .catch(error=>{
+        console.log(error);
+        setWarning(true);
+      })
+  },[]);
+
   function updateArray(arg1){
     setIdioms([...myIdioms, arg1])
     setArray([...newArray, arg1.chinese])
-  }
+  };
 
   const locationPath = useLocation().pathname
 
@@ -35,9 +41,9 @@ function App() {
           timeout={300}
           classNames="page">
           <Routes location={locationPath}>        
-            <Route path="/" element={<Home prop={newArray} propFunc={updateArray}/>}/>
-            <Route path="/translator" element={<TranslateCard />}/>
-            <Route path="/collection" element={<IdiomCollection prop={myIdioms}/>}/>
+            <Route path="/Chinese-Idiom" element={<Home prop={newArray} propFunc={updateArray}/>}/>
+            <Route path="/Chinese-Idiom/translator" element={<TranslateCard />}/>
+            <Route path="/Chinese-Idiom/collection" element={<IdiomCollection prop={myIdioms} warning={warning}/>}/>
           </Routes>
           </CSSTransition>
       </SwitchTransition>
