@@ -5,11 +5,14 @@ import chineseToPinyin from 'chinese-to-pinyin';
 
 function TranslateCard(){
     
-  const [sentence, setTranslate] = useState("欢迎来到我的网站")
-  const [origSent, setOrig] = useState("Welcome to my website")
+  const [sentence, setTranslate] = useState("欢迎来到我的网站");
+  const [origSent, setOrig] = useState("Welcome to my website");
   
   function handleSubmit(e){
     e.preventDefault()
+    if(!process.env){
+      alert("API Environment Variable Not Found!")
+    }
     const newTranslation ={
       free_api: "true",
       text: e.target.something.value,

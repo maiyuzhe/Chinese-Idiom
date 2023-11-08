@@ -34,7 +34,7 @@ function App() {
 
   return (
     <div>
-      <NavBar translator={'/translator'} collection={'/collection'}/>
+      <NavBar translator={'/Chinese-Idiom/translator'} collection={'/Chinese-Idiom/collection'}/>
       <SwitchTransition mode="out-in">
         <CSSTransition 
           key={locationPath}

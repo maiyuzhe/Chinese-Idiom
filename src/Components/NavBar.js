@@ -17,13 +17,13 @@ function NavBar({translator, collection}){
         query: "寻找成语",
         translate: "DeepL翻译",
         collection: "成语包",
-        button: "改成语言"
+        button: "更改语言"
         }
     }
 
     function toggleLocale(){
-        if(locale === "en"){setLocale("zh")}
-        else{setLocale("en")}
+        if(locale === "en") setLocale("zh");
+        else setLocale("en");
     }
 
     const location = useLocation();
@@ -31,9 +31,9 @@ function NavBar({translator, collection}){
     return (
         <div className="navBar">
             <button className="navButton" onClick={toggleLocale}>{strings[locale].button}</button>
-            <Link className={!(location.pathname === "/") ? "navBarLink" : "navSelected"} to="/">{strings[locale].query}</Link>
-            <Link className={!(location.pathname === '/translator') ? "navBarLink" : "navSelected"} to={translator}>{strings[locale].translate}</Link>
-            <Link className={!(location.pathname === '/collection') ? "navBarLink" : "navSelected"} to={collection}>{strings[locale].collection}</Link>
+            <Link className={!(location.pathname === "/Chinese-Idiom") ? "navBarLink" : "navSelected"} to="/Chinese-Idiom">{strings[locale].query}</Link>
+            <Link className={!(location.pathname === '/Chinese-Idiom/translator') ? "navBarLink" : "navSelected"} to={translator}>{strings[locale].translate}</Link>
+            <Link className={!(location.pathname === '/Chinese-Idiom/collection') ? "navBarLink" : "navSelected"} to={collection}>{strings[locale].collection}</Link>
         </div>
     )
 }
