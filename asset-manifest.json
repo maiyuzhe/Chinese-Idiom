@@ -1,16 +1,16 @@
 {
   "files": {
-    "main.css": "/static/css/main.6bd4dd6b.css",
-    "main.js": "/static/js/main.9bda9673.js",
-    "static/media/parchment.jpeg": "/static/media/parchment.adb0fdcb8c512f287ae6.jpeg",
-    "static/media/BankGothic Regular.ttf": "/static/media/BankGothic Regular.4108e236467bac47b375.ttf",
-    "static/media/BankGothic Bold.ttf": "/static/media/BankGothic Bold.21c9136d97176d419591.ttf",
-    "index.html": "/index.html",
-    "main.6bd4dd6b.css.map": "/static/css/main.6bd4dd6b.css.map",
-    "main.9bda9673.js.map": "/static/js/main.9bda9673.js.map"
+    "main.css": "/home/static/css/main.5115b0ff.css",
+    "main.js": "/home/static/js/main.863d9679.js",
+    "static/media/parchment.jpeg": "/home/static/media/parchment.adb0fdcb8c512f287ae6.jpeg",
+    "static/media/BankGothic Regular.ttf": "/home/static/media/BankGothic Regular.4108e236467bac47b375.ttf",
+    "static/media/BankGothic Bold.ttf": "/home/static/media/BankGothic Bold.21c9136d97176d419591.ttf",
+    "index.html": "/home/index.html",
+    "main.5115b0ff.css.map": "/home/static/css/main.5115b0ff.css.map",
+    "main.863d9679.js.map": "/home/static/js/main.863d9679.js.map"
   },
   "entrypoints": [
-    "static/css/main.6bd4dd6b.css",
-    "static/js/main.9bda9673.js"
+    "static/css/main.5115b0ff.css",
+    "static/js/main.863d9679.js"
   ]
 }
