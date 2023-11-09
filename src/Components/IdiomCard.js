@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import translate from "deepl";
 
-function IdiomCard({prop, propFunc}){
+function IdiomCard({prop, propFunc, apiKey}){
 
     const [text, setText] = useState(prop.word)
     const [hideTranslate, setHide] = useState(false)
@@ -16,7 +16,7 @@ function IdiomCard({prop, propFunc}){
         free_api: "true",
         text: prop.word,
         target_lang: 'EN',
-        auth_key: process.env.REACT_APP_API_KEY,
+        auth_key: apiKey,
     }
 
     function handleTranslate(){

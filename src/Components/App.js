@@ -11,6 +11,7 @@ function App() {
   const [myIdioms, setIdioms] = useState([]);
   const [newArray, setArray] = useState([]);
   const [warning, setWarning] = useState(false);
+  const [apiKey, setKey] = useState(undefined);
 
   useEffect(()=>{
       fetch('http://localhost:3001/myIdioms')
@@ -30,6 +31,15 @@ function App() {
     setArray([...newArray, arg1.chinese])
   };
 
+  function updateApiKey(arg, arg2){
+    if(arg2){
+      setKey(undefined);
+      return
+    }
+    arg.preventDefault();
+    setKey(arg.target.key.value)
+  };
+
   const locationPath = useLocation().pathname
 
   return (
@@ -42,8 +52,8 @@ function App() {
           classNames="page">
           <Routes location={locationPath}>        
             <Route path="/Chinese-Idiom" element={<Home prop={newArray} propFunc={updateArray}/>}/>
-            <Route path="/Chinese-Idiom/translator" element={<TranslateCard />}/>
-            <Route path="/Chinese-Idiom/collection" element={<IdiomCollection prop={myIdioms} warning={warning}/>}/>
+            <Route path="/Chinese-Idiom/translator" element={<TranslateCard apiKey={apiKey} updateApiKey={updateApiKey}/>}/>
+            <Route path="/Chinese-Idiom/collection" element={<IdiomCollection apiKey={apiKey} prop={myIdioms} warning={warning}/>}/>
           </Routes>
           </CSSTransition>
       </SwitchTransition>
