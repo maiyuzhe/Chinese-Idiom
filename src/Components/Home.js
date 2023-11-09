@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react';
 import IdiomList from './IdiomList';
 import IdiomSearch from './IdiomSearch';
 
-function Home({prop, propFunc}) {
+function Home({prop, propFunc, apiKey}) {
 
   const [idiomArray, setIdioms] = useState([])
   const [idiomFilter, setFilter] = useState(null)
@@ -25,7 +25,7 @@ function Home({prop, propFunc}) {
     <div>
       <h1>Chinese Idiom Collector</h1>
       <IdiomSearch propFunc={queueIdiom}/>
-      <IdiomList props={idiomsToDisplay} propFunc={propFunc}/>
+      <IdiomList apiKey={apiKey} props={idiomsToDisplay} propFunc={propFunc}/>
     </div>
   );
 }

@@ -20,6 +20,10 @@ function IdiomCard({prop, propFunc, apiKey}){
     }
 
     function handleTranslate(){
+        if(!apiKey){
+            alert("Please enter API key in the translation tab to use this feature.");
+            return
+        }
         translate(idiomTranslation).then(res=> setText(res.data.translations[0].text))
         setHide(!hideTranslate)
         setHide2(!hideCollect)
