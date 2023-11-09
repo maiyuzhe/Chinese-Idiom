@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Chinese-Idiom/static/css/main.2ebcf0fb.css",
-    "main.js": "/Chinese-Idiom/static/js/main.00279277.js",
+    "main.js": "/Chinese-Idiom/static/js/main.b9c57790.js",
     "static/media/parchment.jpeg": "/Chinese-Idiom/static/media/parchment.adb0fdcb8c512f287ae6.jpeg",
     "static/media/BankGothic Regular.ttf": "/Chinese-Idiom/static/media/BankGothic Regular.4108e236467bac47b375.ttf",
     "static/media/BankGothic Bold.ttf": "/Chinese-Idiom/static/media/BankGothic Bold.21c9136d97176d419591.ttf",
     "index.html": "/Chinese-Idiom/index.html",
     "main.2ebcf0fb.css.map": "/Chinese-Idiom/static/css/main.2ebcf0fb.css.map",
-    "main.00279277.js.map": "/Chinese-Idiom/static/js/main.00279277.js.map"
+    "main.b9c57790.js.map": "/Chinese-Idiom/static/js/main.b9c57790.js.map"
   },
   "entrypoints": [
     "static/css/main.2ebcf0fb.css",
-    "static/js/main.00279277.js"
+    "static/js/main.b9c57790.js"
   ]
 }
